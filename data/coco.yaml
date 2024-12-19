@@ -1,0 +1,9 @@
+train: ./data/train  
+val: ./data/val  
+
+# number of classes
+
+nc: 15
+
+# class names
+names: [ 'dur','durak','il ve saga mec','girilmez','ttky','donel','parkyasak','park','il ve sola mec','solyas','sagyas','kirmizi','sag','sol','yesil']

@@ -1,0 +1,6 @@
+train: ./data/train
+val: ./data/val
+
+nc: 20
+
+names: ['dur', 'durak', 'ilsag', 'girmez', 'ttky', 'donel', 'parkyasak', 'park', 'ilsol', 'solyas', 'sagyas', 'kirmizi', 'sag', 'sol', 'yesil']

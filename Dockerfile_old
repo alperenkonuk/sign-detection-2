@@ -1,0 +1,95 @@
+FROM ubuntu:20.04
+
+RUN apt-get update && \
+    apt-get install -y software-properties-common wget && \
+    add-apt-repository ppa:deadsnakes/ppa && \
+    apt-get update && \
+    apt-get install -y python3.10 && \
+    apt-get clean
+	
+RUN wget https://bootstrap.pypa.io/get-pip.py && \
+    python3.10 get-pip.py && \
+    rm get-pip.py
+	
+RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1 && \
+    update-alternatives --install /usr/bin/pip3 pip3 /usr/local/bin/pip3 1
+
+RUN python3 -m pip install appdirs==1.4.4
+RUN python3 -m pip install astor==0.8.1
+RUN python3 -m pip install attrdict==2.0.1
+RUN python3 -m pip install Babel==2.11.0
+RUN python3 -m pip install bce-python-sdk==0.8.74
+RUN python3 -m pip install beautifulsoup4==4.11.1
+RUN python3 -m pip install black==21.7b0
+RUN python3 -m pip install cachetools==5.2.0
+RUN python3 -m pip install certifi==2022.9.24
+RUN python3 -m pip install charset-normalizer==2.1.1
+RUN python3 -m pip install click==8.1.3
+RUN python3 -m pip install contourpy==1.0.6
+RUN python3 -m pip install cssselect==1.2.0
+RUN python3 -m pip install cssutils==2.6.0
+RUN python3 -m pip install cycler==0.11.0
+RUN python3 -m pip install Cython==0.29.32
+RUN python3 -m pip install decorator==5.1.1
+RUN python3 -m pip install dill==0.3.6
+RUN python3 -m pip install et-xmlfile==1.1.0
+RUN python3 -m pip install fire==0.5.0
+RUN python3 -m pip install Flask==2.2.2
+RUN python3 -m pip install Flask-Babel==2.0.0
+RUN python3 -m pip install fonttools==4.38.0
+RUN python3 -m pip install future==0.18.2
+RUN python3 -m pip install idna==3.4
+RUN python3 -m pip install imageio==2.23.0
+RUN python3 -m pip install imgaug==0.4.0
+RUN python3 -m pip install isort==5.9.2
+RUN python3 -m pip install itsdangerous==2.1.2
+RUN python3 -m pip install Jinja2==3.1.2
+RUN python3 -m pip install kiwisolver==1.4.4
+RUN python3 -m pip install lmdb==1.4.0
+RUN python3 -m pip install lxml==4.9.2
+RUN python3 -m pip install MarkupSafe==2.1.1
+RUN python3 -m pip install matplotlib==3.6.2
+RUN python3 -m pip install multiprocess==0.70.14
+RUN python3 -m pip install mypy-extensions==0.4.3
+RUN python3 -m pip install networkx==2.8.8
+RUN python3 -m pip install numpy==1.23.5
+RUN python3 -m pip install opencv-contrib-python==4.6.0.66
+RUN python3 -m pip install opencv-python==4.6.0.66
+RUN python3 -m pip install openpyxl==3.0.10
+RUN python3 -m pip install opt-einsum==3.3.0
+RUN python3 -m pip install packaging==22.0
+RUN python3 -m pip install paddle-bfloat==0.1.7
+RUN python3 -m pip install paddleocr==2.6.1.1
+RUN python3 -m pip install pandas==1.5.2
+RUN python3 -m pip install pathspec==0.10.3
+RUN python3 -m pip install pdf2docx==0.5.6
+RUN python3 -m pip install Pillow==9.3.0
+RUN python3 -m pip install premailer==3.10.0
+RUN python3 -m pip install protobuf==3.20.0
+RUN python3 -m pip install pyclipper==1.3.0.post4
+RUN python3 -m pip install pycryptodome==3.16.0
+RUN python3 -m pip install PyMuPDF==1.20.2
+RUN python3 -m pip install pyparsing==3.0.9
+RUN python3 -m pip install python-dateutil==2.8.2
+RUN python3 -m pip install python-docx==0.8.11
+RUN python3 -m pip install pytz==2022.7
+RUN python3 -m pip install PyWavelets==1.4.1
+RUN python3 -m pip install PyYAML==6.0
+RUN python3 -m pip install rapidfuzz==2.13.6
+RUN python3 -m pip install regex==2022.10.31
+RUN python3 -m pip install requests==2.28.1
+RUN python3 -m pip install scikit-image==0.19.3
+RUN python3 -m pip install scipy==1.9.3
+RUN python3 -m pip install shapely==2.0.0
+RUN python3 -m pip install six==1.16.0
+RUN python3 -m pip install soupsieve==2.3.2.post1
+RUN python3 -m pip install termcolor==2.1.1
+RUN python3 -m pip install tifffile==2022.10.10
+RUN python3 -m pip install tomli==1.2.3
+RUN python3 -m pip install tqdm==4.64.1
+RUN python3 -m pip install typing_extensions==4.7.1
+RUN python3 -m pip install urllib3==1.26.13
+RUN python3 -m pip install visualdl==2.4.1
+RUN python3 -m pip install Werkzeug==2.2.2
+RUN python3 -m pip install seaborn
+RUN python3 -m pip install torch==2.3.0
